@@ -10,9 +10,10 @@ import routing.repository.UserRepository;
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
-  private final UserRepository userRepository;
-  @Transactional
+    private final UserRepository userRepository;
+
+    @Transactional
     public User createUser(User user) {
-      return userRepository.save(user);
+        return userRepository.save(user);
     }
 }
